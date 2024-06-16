@@ -61,3 +61,7 @@ Show that its derivative is:
 ## Results
 
 The results include visualizations of the data points, decision boundaries, and analytical solutions for the specified tasks. Example outputs are provided in the notebook.
+
+![First Results for Task 1](Poins_w1_w2.png)
+![Second Results for Task 1](decision_frontier.png)
+![Result for Task 2](2D_space.png)
