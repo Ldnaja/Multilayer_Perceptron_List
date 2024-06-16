@@ -57,11 +57,13 @@ plt.title('Lines in 2D Space')
 plt.grid(True)
 plt.show()
 
+# Check linear separability again
 clf = MLPClassifier(hidden_layer_sizes=(5,), activation='logistic', max_iter=5000)
-clf.fit(patterns, labels)
+clf.fit(X_scaled, y)
 
-print("Are the patterns linearly separable?", clf.score(patterns, labels) == 1)
+print("Are the patterns linearly separable?", clf.score(X_scaled, y) == 1)
 
+# Symbolic computation of the derivative of the tansig function
 n = sp.symbols('n')
 tansig = (sp.exp(n) - sp.exp(-n)) / (sp.exp(n) + sp.exp(-n))
 tansig_prime = sp.diff(tansig, n)
